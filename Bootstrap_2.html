@@ -12,7 +12,7 @@
           
     <header>       
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
-                <a class="navbar-brand" href="#">Product Page</a>
+                <a class="navbar-brand" href="#">Product Page Example</a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -41,7 +41,7 @@
            <form>                     
                 <div class="row">
                     <div class="col-sm-6 text-left">
-                        <label for="ddlSearchby" class="h5">Search by</label>
+                        <label for="ddlSearchby" class="h6">Search by</label>
                         <select class="col-sm-3 form-control-sm" id="ddlSearchby">
                                 <option selected disabled hidden>Product Select..</option>
                                 <option>Baking Pan</option>
@@ -58,19 +58,29 @@
                 </div>
                 <div class="row">
                         <div class="col-sm-6 text-left">
-                             <label for="priceFrom" class="h5">Price ($): </label>&nbsp;<label class="h5">between</label><input id ="priceFrom" class="form-control-sm" type="number" value="10" />&nbsp;<label class="h5">and</label><input class="form-control-sm" id="priceTo" type="number" value="100"/>
+                             <label for="priceFrom" class="h6">Price ($): </label>&nbsp;<label class="h6">between</label><input id ="priceFrom" class="form-control-sm" type="number" value="10" />&nbsp;<label class="h6">and</label><input class="form-control-sm" id="priceTo" type="number" value="100"/>
                         </div>                                                  
                     </div>
                     <div class="row"></div>
                     <div class="row">
                             <div class="col-sm-6 text-left">
-                                <label for="dateAvailableFrom" class="h5">First available: </label>&nbsp;<label class="h5"> From</label><input id="dateAvailableFrom" class="form-control-sm" type="date" value="2013-01-01"/>&nbsp;<label class="h5">to</label><input id="dateAvailableTo" class="form-control-sm" type="date" value="2015-01-08" />
+                                <label for="dateAvailableFrom" class="h6">First available: </label>&nbsp;
+                                <label class="h6"> From</label>
+                                <input id="dateAvailableFrom" class="form-control-sm" type="date" value="2013-01-01"/>
+                                <span >
+                                  <i class="fa fa-calendar fa-1x fa-border"></i>
+                                </span>
+                                &nbsp;<label class="h6">to</label>
+                                <input id="dateAvailableTo" class="form-control-sm" type="date" value="2015-01-08" />
+                                <span >
+                                  <i class="fa fa-calendar fa-1x fa-border"></i>
+                                </span>
                             </div>  
                     </div>
                     <div class="row"></div>
                     <div class="row">
                             <div class="col-sm-8 text-left">
-                                <label for="ddlProductStatus" class="h5">Product status:</label>
+                                <label for="ddlProductStatus" class="h6">Product status:</label>
                                 <select class="col-sm-2 form-control-sm" id="ddlProductStatus">
                                     <option selected disabled hidden>Product Status..</option>
                                     <option>Available</option>
@@ -87,7 +97,7 @@
             <thead>
               <tr>
                 <th scope="col"><input type="checkbox" value=""></th>
-                <th scope="col" >product Name
+                <th scope="col" aria-selected="true">product Name
                 </th>
                 <th scope="col">Category ID</th>
                 <th scope="col">Category Name</th>
@@ -184,7 +194,7 @@
                 <button type="button" class="btn btn-primary btn-sm">Add product</button>
               </div>
               <div class="col-sm-1">
-                <button type="button" class="btn btn-primary btn-sm">Delete product</button>
+                <button type="button" class="btn btn-primary btn-sm" disabled>Delete product</button>
               </div>
           </div>
           
