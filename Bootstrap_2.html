@@ -6,11 +6,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">    
     <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
-    <link href="StyleSheet.css" rel="stylesheet">    
+    <style>
+        fieldset {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        legend {
+            width: inherit;
+            padding: 0 10px;
+            border-bottom: none;
+        }
+    </style>    
 </head>
-<body class="container-fluid">
+<body class="card" style="width: 80rem;height:50rem;margin-left:15%;margin-top:5%">
           
-    <header>       
+    <header class="card-header">       
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
                 <a class="navbar-brand" href="#">Product Page Example</a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
@@ -32,7 +44,7 @@
                 </div>
             </nav>
     </header>
-    <main>
+    <main class="card-body">
         <div class="col-sm-12" style="margin-bottom: 20px;">
             <fieldset>
            <legend>
@@ -42,7 +54,7 @@
                 <div class="row">
                     <div class="col-sm-6 text-left">
                         <label for="ddlSearchby" class="h6">Search by</label>
-                        <select class="col-sm-3 form-control-sm" id="ddlSearchby">
+                        <select class="col-sm-4 form-control-sm" id="ddlSearchby">
                                 <option selected disabled hidden>Product Select..</option>
                                 <option>Baking Pan</option>
                                 <option>Bath Rug</option>
@@ -57,13 +69,15 @@
 
                 </div>
                 <div class="row">
-                        <div class="col-sm-6 text-left">
-                             <label for="priceFrom" class="h6">Price ($): </label>&nbsp;<label class="h6">between</label><input id ="priceFrom" class="form-control-sm" type="number" value="10" />&nbsp;<label class="h6">and</label><input class="form-control-sm" id="priceTo" type="number" value="100"/>
+                        <div class="col-sm-8 text-left">
+                             <label for="priceFrom" class="h6">Price ($): </label>&nbsp;
+                            <label class="h6">between</label><input id ="priceFrom" class="form-control-sm" type="number" value="10" />&nbsp;
+                            <label class="h6">and</label><input class="form-control-sm" id="priceTo" type="number" value="100"/>
                         </div>                                                  
                     </div>
                     <div class="row"></div>
                     <div class="row">
-                            <div class="col-sm-6 text-left">
+                            <div class="col-sm-10 text-left">
                                 <label for="dateAvailableFrom" class="h6">First available: </label>&nbsp;
                                 <label class="h6"> From</label>
                                 <input id="dateAvailableFrom" class="form-control-sm" type="date" value="2013-01-01"/>
@@ -79,15 +93,17 @@
                     </div>
                     <div class="row"></div>
                     <div class="row">
-                            <div class="col-sm-8 text-left">
+                            <div class="col-sm-3 text-left">
                                 <label for="ddlProductStatus" class="h6">Product status:</label>
-                                <select class="col-sm-2 form-control-sm" id="ddlProductStatus">
+                                <select class="col-sm-6 form-control-sm" id="ddlProductStatus">
                                     <option selected disabled hidden>Product Status..</option>
                                     <option>Available</option>
                                     <option>Out Of Stock</option>
-                            </select>
-                            <button type="button" class="btn btn-primary btn-sm">Go</button>&nbsp;<button type="button" class="btn btn-secondary btn-sm">Clear</button>
-                            </div>                               
+                            </select>                            
+                            </div> 
+                        <div class="col-sm-6 text-left">
+                            <button type="button" class="col-sm-1 btn btn-primary btn-sm">Go</button>&nbsp;<button type="button" class="btn btn-secondary btn-sm">Clear</button>
+                        </div>
                     </div>              
            </form>
        </fieldset>
@@ -98,12 +114,23 @@
               <tr>
                 <th scope="col"><input type="checkbox" value=""></th>
                 <th scope="col" aria-selected="true">product Name
+                    <i class="fa fa-sort" style="color:lightgray" aria-hidden="true"></i>
                 </th>
-                <th scope="col">Category ID</th>
-                <th scope="col">Category Name</th>
-                <th scope="col">Unit Price ($)</th>
-                <th scope="col">Status</th>
-                <th scope="col">Available Since</th>  
+                <th scope="col">Category ID
+                    <i class="fa fa-sort" style="color:lightgray" aria-hidden="true"></i>
+                </th>
+                <th scope="col">Category Name
+                    <i class="fa fa-sort" style="color:lightgray" aria-hidden="true"></i>
+                 </th>
+                <th scope="col">Unit Price ($)
+                    <i class="fa fa-sort" style="color:lightgray" aria-hidden="true"></i>
+                 </th>
+                <th scope="col">Status
+                    <i class="fa fa-sort" style="color:lightgray" aria-hidden="true"></i>
+                 </th>
+                <th scope="col">Available Since
+                    <i class="fa fa-sort" style="color:lightgray" aria-hidden="true"></i>
+                 </th>  
               </tr>
             </thead>
             <tbody>
@@ -155,7 +182,7 @@
             </tbody>
           </table>
           <div  class="row">
-              <div class="col-sm-9">
+              <div class="col-sm-8">
                     <select class="col-sm-1 form-control-sm" id="ddlPage">
                             <option>1</option>
                             <option>2</option>
@@ -165,7 +192,7 @@
                     </select>            
                     <label style="color:darkgrey;">items per page</label>        
               </div>
-              <div class="col-sm-3">
+              <div class="col-sm-4 justify-content-end">
                     <nav aria-label="Page navigation example">
                             <ul class="pagination pagination-sm">
                               <li class="page-item">
@@ -190,17 +217,17 @@
 
           </div>
           <div class="row">
-              <div class="col-sm-1">
+              <div class="col-sm-2">
                 <button type="button" class="btn btn-primary btn-sm">Add product</button>
               </div>
-              <div class="col-sm-1">
+              <div class="col-sm-2">
                 <button type="button" class="btn btn-primary btn-sm" disabled>Delete product</button>
               </div>
           </div>
           
        </div>
     </main>
-    <footer class="footer">
+    <footer class="card-footer">
         <div>
             <span class="float-left">&copy;SPA AngularJS - Bootstrap</span>
         </div>
