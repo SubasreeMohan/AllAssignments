@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,74 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-            * {
-                box-sizing: border-box;
-            }
-            
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            
-            /* Style the header */
-            header {
-                background-color:darkgrey;
-                padding: 20p;
-                text-align: center;
-                font-size: 20px;
-                color: white;
-            }
-            
-             
-            nav {
-                float: left;
-                width: 20%;
-                height: 400px; 
-                background:  #f1f1f1;
-                padding: 20px;
-            }
-            
-             
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-            
-            article {
-                float: left;
-                padding: 20px;
-                width: 80%;
-                background-color: #f1f1f1;
-                height: 400px; 
-            }
-            
-             
-            section:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-            
-            
-            footer {
-                background-color: darkgrey;
-                padding: 10px;
-                text-align: center;
-                color: white;
-            }
-            
-           
-            </style>
+        body {
+            border:1px solid black;
+        }
+        header {
+            background-color: darkgrey;
+            text-align: center;
+            font-size: 20px;
+        }
+        nav{
+            float:left;
+        }
+        article{
+            background-color:lightpink;
+            margin-left:10%;
+            width:80%;
+            height:80%;
+            float:left
+        }
+        footer {
+            clear: both;
+            background-color: darkgrey;
+            text-align: center;
+            font-size: 20px;
+        }
+
+     </style>
 </head>
 <body>   
- 
-<header>
+        <header>
         <h2><i>Personal Information</i></h2>
       </header>
       
       <section>
         <nav>
           <ul>
-            <li><a href="Profile Highlights.html" target="iframe_load">Personal Highlights</a></li>
+            <li><a href="Index.html" target="iframe_load">Personal Highlights</a></li>
             <li><a href="Projects.html" target="iframe_load">Project</a></li>
             <li><a href="Experience.html" target="iframe_load">Experience</a></li>
             <li><a href="Personal Biography.html" target="iframe_load">Personal Biography</a></li>
@@ -82,7 +50,7 @@
         </nav>
         
         <article>
-        <iframe height="340px" width="100%" src="Profile Highlights.html" name="iframe_load"></iframe>
+        <iframe height="340px" width="100%" src="Index.html" name="iframe_load"></iframe>
          </article>
       </section>
       
