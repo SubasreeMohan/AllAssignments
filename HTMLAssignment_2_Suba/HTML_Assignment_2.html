@@ -1,11 +1,43 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="Style.css">
+    <style>
+
+        .container {
+            padding: 10px;
+        }
+
+        label {
+            clear: both;
+            float: left;
+        }
+
+        input {
+            clear: both;
+            float: left;
+            width: 20%;
+            margin-bottom: 10px;
+        }
+
+            input[type=text] {
+                clear: none;
+                float: left;
+                width: 20%;
+                height: 20%;
+                margin-left: 10px;
+            }
+
+            input[type=submit] {
+                clear: none;
+                float: left;
+                margin-left: 10px;
+                width: 4%;
+            }
+    </style>
 </head>
 <body>
     <header>
@@ -13,33 +45,33 @@
     </header>
     <form>
         <main class="container">
-            <label for="txtNumber">Number Demo:</label>
-            <input name="txtNumber" type="number"/>
+            <label for="Number">Number Demo:</label>
+            <input name="Number" type="number" required/>
 
-            <label for="txtRange">Range Demo:</label>
-            <input name="txtRange" type="range" min="1" max="100" value="50" step="2"/>
+            <label for="Range">Range Demo:</label>
+            <input name="Range" type="range" min="1" max="100" value="50" step="2"/>
 
-            <label for="txtcolor">Color Demo</label>
-            <input name="txtcolor" type="color" value="#00FF00"/>
+            <label for="color">Color Demo</label>
+            <input name="color" type="color" value="#00FF00"/>
 
-            <label for="txtDate">Date Demo</label>
-            <input name="txtDate" type="date"/>       
+            <label for="Date">Date Demo</label>
+            <input name="Date" type="date" required/>       
 
-            <label for="txtTime">Time Demo</label>
-            <input name="txtTime" type="time"/>
+            <label for="Time">Time Demo</label>
+            <input name="Time" type="time" required/>
 
-            <label for="txtDatetimelocal">Date Time Local Demo</label>
-            <input name="txtDatetimelocal" type="datetime-local"/>
+            <label for="Datetimelocal">Date Time Local Demo</label>
+            <input name="Datetimelocal" type="datetime-local" required/>
 
-            <label for="txtDateTime">Date Time Demo</label>
-            <input name="txtDateTime" type="datetime"/>
+            <label for="DateTime">Date Time Demo</label>
+            <input name="DateTime" type="datetime" placeholder='dd/MM/yyyy hh:mm:ss tt' pattern="[0-3][0-9]\/[0-1][0-9]\/[0-9]{4} [0-1][0-9]:[0-5][0-9]:[0-5][0-9] [paPA][Mm]" required/>
 
-            <label for="txtBirthMonth">Birth Month</label>
-            <input name="txtBirthMonth" type="month"/>
+            <label for="BirthMonth">Birth Month</label>
+            <input name="BirthMonth" type="month" required/>
             
-            <label for="txtVacation">Vacation Week</label>
-            <input name="txtVacation" type="week"/>
-            <input name="txtvalue" type="text" placeholder="Enter Value"/>
+            <label for="Vacation">Vacation Week</label>
+            <input name="Vacation" type="week" required/>
+            <input name="value" type="text" placeholder="Enter Value" required/>
             <input name="Submit" type="submit" value="GO!"/>
         </main>
 </form>
