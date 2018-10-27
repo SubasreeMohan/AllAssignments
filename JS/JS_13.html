@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Enter Text for longest word: <input id = "txtstring1" type="text"/> 
+        <button id="btnSubmit1" onclick="longest_word()">Submit</button>
+        <span id="Result1"></span>
+        <br/>
+        <br/>
+        Enter Text for get unique word: <input id = "txtstring2" type="text"/> 
+        <button id="btnSubmit2" onclick="unique_word()">Submit</button>
+        <span id="Result2"></span>
+        <br/>
+        <br/>
+        Enter Text for get no of occurance word: <input id = "txtstring3" type="text"/> 
+        <button id="btnSubmit3" onclick="occurance_word()">Submit</button>
+        <span id="Result3"> view console</span>
+</body>
+</html>
+<script>
+    function longest_word()
+    {
+        var inpt = document.getElementById("txtstring1").value;
+        
+
+        if(inpt.length >= 1)
+        {
+            var array1 = inpt.match(/\w[a-z]{0,}/gi);
+            var result = array1[0];
+
+            for(var x = 1 ; x < array1.length ; x++)
+            {
+                if(result.length < array1[x].length)
+                {
+                result = array1[x];
+                } 
+            }
+            document.getElementById("Result1").innerHTML = result;
+        }
+        else{
+            document.getElementById("Result1").innerHTML = "false";
+        }
+    }
+
+    function unique_word()
+    {
+        var inpt2 = document.getElementById("txtstring2").value;
+        var result1= "";
+
+        if(inpt2.length >= 1)
+        {
+            for(var x = 1 ; x < inpt2.length ; x++)
+            {
+                if(result1.indexOf(inpt2.charAt(x)) == -1)
+                {
+                    result1 += inpt2[x];
+                } 
+            }
+            document.getElementById("Result2").innerHTML = result1;
+        }
+        else{
+            document.getElementById("Result2").innerHTML = "false";
+        }
+    }
+
+    function occurance_word()
+    {
+        var inpt3 = document.getElementById("txtstring3").value;
+
+        if(inpt3.length >= 1)
+        {
+            var uchars = {};
+            inpt3.replace(/\S/g, function (l) { uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 1); });
+
+            console.log(uchars) ;
+        }
+        else{
+            console.log("false");
+        }
+    }
+
+   
+</script>

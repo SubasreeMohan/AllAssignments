@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Enter Number: <input id = "txtnumber" type="text"/> 
+    <button id="btnSubmit">Submit</button> <span id="message"></span>
+</body>
+</html>
+<script>
+    
+    function randomnumber(Maxvalue){
+        return Math.floor(Math.random() * Maxvalue);
+    } 
+
+    var buttonclick = document.getElementById("btnSubmit");
+
+    buttonclick.addEventListener("click",Comparevalue);
+
+    function Comparevalue()
+    {
+        var inputnumber = document.getElementById("txtnumber").value;
+        var randomvalue = randomnumber(10);
+
+        if(parseInt(inputnumber) === parseInt(randomvalue))
+        {
+            document.getElementById("message").innerHTML = "Good Work";
+        }
+        else
+        {
+            document.getElementById("message").innerHTML = "Not matched";
+        }
+    }
+</script>

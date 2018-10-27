@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Enter Text: <input id = "txtstring" type="text"/> 
+        <button id="btnSubmit" onclick="CompareString()">Submit</button>
+        <span id="Result"></span>
+</body>
+</html>
+<script>
+    function CompareString()
+    {
+        var inpt = document.getElementById("txtstring").value;
+
+        var pvalue = inpt.replace(/[^p]/g,"");
+        var svalue = inpt.replace(/[^s]/g,"");
+
+        if(pvalue.length == svalue.length)
+        {
+            document.getElementById("Result").innerHTML = "true";
+        }
+        else{
+            document.getElementById("Result").innerHTML = "false";
+        }
+    }
+</script>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Current Date : <span id="formatDate1"></span> , <span id="formatDate2"></span>
+    </body>
+    </html>
+    <script>
+        var d = new Date();        
+        var format1 = (d.getMonth() + 1) + '-' + d.getDate() + '-' + d.getFullYear();
+        var format2 = (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getFullYear();
+        document.getElementById("formatDate1").innerHTML = format1;
+        document.getElementById("formatDate2").innerHTML = format2;
+        
+    </script>

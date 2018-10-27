@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Enter Text: <input id = "txtstring" type="text"/> 
+    <button id="btnSubmit" onclick="ToUpperCase()">Submit</button>
+    <span id="Result"></span>
+</body>
+</html>
+<script>  
+    
+    function ToUpperCase()
+    {
+        var input = document.getElementById("txtstring").value;
+
+        var splitvalue = input.split(" ");
+        var length = splitvalue.length;
+        for(var i=0;i<length;i++ )
+        {
+            splitvalue[i] = splitvalue[i][0].toUpperCase() + splitvalue[i].substr(1);
+        }
+
+        var Result = splitvalue.join(" ");
+
+        document.getElementById("Result").innerHTML = Result;
+        
+    }
+</script>

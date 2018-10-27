@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS01</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var d = new Date();
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            document.getElementById("Stoday").innerHTML = days[d.getDay()];
+            document.getElementById("hours").innerHTML = d.toLocaleString('en-US', { hour: 'numeric', hour12: true });
+            document.getElementById("mins").innerHTML = d.getMinutes();
+            document.getElementById("secs").innerHTML = d.getSeconds();
+    
+        });
+           
+    </script>    
+</head>
+<body>       
+        
+    <main>
+        <p>Today is: <span id="Stoday"></span>. </p>
+        <p>Current time is: <span id="hours"></span> : <span id="mins"></span> : <span id="secs"></span> </p>
+    </main>
+
+    
+</body>
+</html>
