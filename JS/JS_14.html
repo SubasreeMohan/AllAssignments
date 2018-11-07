@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Enter length : <input id = "txtlength" type="text"/> 
+        <button id="btnSubmit1" onclick="random_char()">Submit</button>
+        <span id="Result1"></span>
+</body>
+</html>
+<script>
+    function random_char()
+    {
+        var inpt = document.getElementById("txtlength").value;        
+        
+        var text = "";       
+        var char_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for (var i = 0; i < inpt; i++) {
+            text += char_list.charAt(Math.floor(Math.random() * char_list.length));
+       
+        document.getElementById("Result1").innerHTML = text;
+    }            
+      
+    }
+</script>

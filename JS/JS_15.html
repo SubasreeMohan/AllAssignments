@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Enter text : <input id = "txtString" type="text"/> 
+        <button id="btnSubmit1" onclick="longest_substring()">Submit</button>
+        <span id="Result1"></span>
+</body>
+</html>
+<script>
+    function longest_substring(){
+        var input = document.getElementById("txtString").value;    
+        var chars = input.split('');
+        var curr_char;
+        var str = "";
+        var longest_string = "";
+        var hash = {};
+        for (var i = 0; i < chars.length; i++) {
+            curr_char = chars[i];
+            if (!hash[chars[i]]) {
+                str += curr_char;
+                hash[chars[i]] = { index: i };
+            }
+            else {
+                if (longest_string.length <= str.length) {
+                    longest_string = str;
+                }
+                var prev_dupeIndex = hash[curr_char].index;
+                var str_FromPrevDupe = input.substring(prev_dupeIndex + 1, i);
+                str = str_FromPrevDupe + curr_char;
+                hash = {};
+                for (var j = prev_dupeIndex + 1; j <= i; j++) {
+                    hash[input.charAt(j)] = { index: j };
+                }
+            }
+        }
+        document.getElementById("Result1").innerHTML =  longest_string.length > str.length ? longest_string : str;
+
+    }
+</script>
