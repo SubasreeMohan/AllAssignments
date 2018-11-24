@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Contact Form</title>
+    <style>
+            body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+            .contact h2, .contact label {font-family:Georgia, Times, "Times New Roman", serif;}
+            .form_hint, .notification {font-size: 11px;}
+            .contact ul {
+                width:750px;
+                list-style-type:none;
+                list-style-position:outside;
+                margin:0px;
+                padding:0px;
+            }
+            .contact li{
+                padding:12px; 
+                border-bottom:1px solid #eee;
+                position:relative;
+            }
+            .contact li:first-child, .contact li:last-child {
+                border-bottom:1px solid #777;
+            }
+            .contact h2 {
+                margin:0;
+                display: inline;
+            }
+            .notification {
+                color:#d45252; 
+                margin:5px 0 0 0; 
+                display:inline;
+                float:right;
+            }
+            .contact label {
+                width:150px;
+                margin-top: 3px;
+                display:inline-block;
+                float:left;
+                padding:3px;
+            }
+            .contact input {
+                height:20px; 
+                width:220px; 
+                padding:5px 8px;
+            }
+            .contact textarea {padding:8px; width:300px;}
+            .contact button {margin-left:156px;}
+            .contact input, .contact textarea { 
+                border:1px solid #aaa;
+                box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+                border-radius:2px;
+            }
+            .contact input:focus, .contact textarea:focus {
+                background: #fff; 
+                border:1px solid #555; 
+                box-shadow: 0 0 3px #aaa; 
+            }
+            
+                button.submit {
+                    background-color: #68b12f;
+                    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+                    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+                    border: 1px solid #509111;
+                    border-bottom: 1px solid #5b992b;
+                    border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    box-shadow: inset 0 1px 0 0 #9fd574;
+                    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+                    color: white;
+                    font-weight: bold;
+                    padding: 6px 20px;
+                    text-align: center;
+                    text-shadow: 0 -1px 0 #396715;
+                }
+            button.submit:hover {
+                opacity:.85;
+                cursor: pointer; 
+            }
+            button.submit:active {
+                border: 1px solid #20911e;
+                box-shadow: 0 0 10px 5px #356b0b inset; 
+                -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+                
+            }
+            .contact input:focus, .contact textarea:focus { 
+                padding-right:70px;
+            }
+            .contact input, .contact textarea {
+               
+                -webkit-transition: padding .25s;                
+                transition: padding .25s;
+            }
+            .contact input, .contact textarea {
+                padding-right:30px;
+            }
+              input:required, textarea:required {
+                background: #fff url(images/red_asterisk.png) no-repeat 98% center;
+            }
+            .contact input:focus:invalid, .contact textarea:focus:invalid { 
+                background: #fff url(images/invalid.png) no-repeat 98% center;
+                box-shadow: 0 0 5px #d45252;
+                border-color: #b03535
+            }
+            .contact input:required:valid, .contact textarea:required:valid { 
+                background: #fff url(images/valid.png) no-repeat 98% center;
+                box-shadow: 0 0 5px #5cd053;
+                border-color: #28921f;
+            }
+            .form_hint {
+                background: #d45252;
+                border-radius: 3px 3px 3px 3px;
+                color: white;
+                margin-left:8px;
+                padding: 1px 6px;
+                z-index: 999; 
+                position: absolute; 
+                display: none;
+            }
+            .form_hint::before {
+                content: "\25C0";
+                color:#d45252;
+                position: absolute;
+                top:1px;
+                left:-6px;
+            }
+            .contact input:focus + .form_hint {display: inline;}
+            .contact input:required:valid + .form_hint {background: #28921f;} 
+            .contact input:required:valid + .form_hint::before {color:#28921f;}
+            </style>
+            
+</head>
+<body>
+    <form name="contact" method="POST" action="" class="contact">
+        <ul>
+            <li>
+                <h2>
+                    Contact US
+                </h2>
+                <span class="notification">*Denotes Required Field</span>
+            </li>
+            <li>
+                <label for="Name">Name:</label>
+                <input type="text" name="Name" required placeholder="RamaSubasree.M.S"/>
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" name="Email" required placeholder="RamaSubasree.MS@cognizant.com"/>
+                <span class="form_hint">Proper format "RamaSubasree.MS@cognizant.com"</span>
+            </li>
+            <li>
+                <label for="Website">Website:</label>
+                <input type="url" name="Website" required placeholder="https://www.cognizant.com"/>                
+                <span class="form_hint">Proper format "https://www.cognizant.com"</span>
+
+            </li>
+            <li>
+                <label for="Message">Message:</label>
+                <textarea name="Message" cols="40" rows="6" required></textarea>
+            </li>
+            <li>
+                <button type="submit">Submit Form</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
