@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClone.BAL", "TwitterClone.BAL\TwitterClone.BAL.csproj", "{91DD9738-7F63-4BF0-98CD-85D087D140A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClone.DAL", "TwitterClone.DAL\TwitterClone.DAL.csproj", "{AF885097-01B5-44EA-A45D-66F03FE56DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClone.Entity", "TwitterClone.Entity\TwitterClone.Entity.csproj", "{674C2FA5-BFD6-4432-9D7B-14261722F463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterCloneWeb", "TwitterCloneWeb\TwitterCloneWeb.csproj", "{134307C2-3656-415D-8C59-ED4F2A8AC4E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91DD9738-7F63-4BF0-98CD-85D087D140A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91DD9738-7F63-4BF0-98CD-85D087D140A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91DD9738-7F63-4BF0-98CD-85D087D140A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91DD9738-7F63-4BF0-98CD-85D087D140A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF885097-01B5-44EA-A45D-66F03FE56DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF885097-01B5-44EA-A45D-66F03FE56DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF885097-01B5-44EA-A45D-66F03FE56DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF885097-01B5-44EA-A45D-66F03FE56DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{674C2FA5-BFD6-4432-9D7B-14261722F463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{674C2FA5-BFD6-4432-9D7B-14261722F463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{674C2FA5-BFD6-4432-9D7B-14261722F463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{674C2FA5-BFD6-4432-9D7B-14261722F463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134307C2-3656-415D-8C59-ED4F2A8AC4E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134307C2-3656-415D-8C59-ED4F2A8AC4E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134307C2-3656-415D-8C59-ED4F2A8AC4E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134307C2-3656-415D-8C59-ED4F2A8AC4E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
