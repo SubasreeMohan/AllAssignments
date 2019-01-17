@@ -30,9 +30,13 @@ namespace TwitterCloneWeb.Models
         public string ConfrimPassword { get; set; }
 
         [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "required")]
         [DisplayName("Email Address")]
+        [EmailAddress(ErrorMessage ="Invalid Email")]
         public string Email { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayName("Joined Date")]
         public DateTime Joined { get; set; }
 
         public bool Active { get; set; }

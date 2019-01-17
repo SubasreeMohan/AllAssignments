@@ -1,0 +1,12 @@
+Erorr The underlying provider failed on Open.
+Controller Twitter
+Action GetTweetMessages
+Date 17-01-2019 15:22:20
+Erorr The underlying provider failed on Open.
+Controller Twitter
+Action SearchUsersByName
+Date 17-01-2019 15:24:15
+Erorr The underlying provider failed on Open.
+Controller Twitter
+Action GetTweetMessages
+Date 17-01-2019 15:34:51
